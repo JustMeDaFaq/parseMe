@@ -1,7 +1,7 @@
 url="https://openload.co/embed/"+url;
      var http = new XMLHttpRequest();
       http.open("GET", url,true);
-
+console.log("hi");
        http.onloadend = function() {
 
        
