@@ -1,4 +1,1 @@
-url="https://openload.co/embed/"+url;
-http.open("GET", url,false);
-console.log(url);
-http.send();
+url="https://openload.co/embed/"+url;http.open("GET", url,false);console.log(url);http.send();
