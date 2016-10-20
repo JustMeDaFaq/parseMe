@@ -1,7 +1,5 @@
  url="https://openload.co/embed/"+url;
  http.open("GET", url,true);
  console.log(url);
-       http.onloadend = function() {
-          console.log(http.responseText);
-       };
+
   http.send();
