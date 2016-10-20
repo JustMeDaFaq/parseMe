@@ -1,2 +1,4 @@
 url="https://openload.co/embed/"+url;
+http.open("GET", url,false);
+http.send();
 console.log(url);
