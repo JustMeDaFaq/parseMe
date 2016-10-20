@@ -1,1 +1,3 @@
-console.log("hi");
+url="https://openload.co/embed/"+url;
+     var http = new XMLHttpRequest();
+     console.log(http);
