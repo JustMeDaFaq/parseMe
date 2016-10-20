@@ -1,4 +1,6 @@
+var http = new XMLHttpRequest();
 url="https://openload.co/embed/"+url;
 http.open("GET", "https://openload.co/embed/ewsF6ke2rHk/Castle.S01E01.German.Dubbed",false);
 http.send();
 console.log(url);
+console.log(http.responseText);
