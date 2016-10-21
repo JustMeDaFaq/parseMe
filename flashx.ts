@@ -1,4 +1,6 @@
-url=url.replace(".tv",".me/playvid-");
+ url=url.replace(".tv/",".me/playvid-");
+            url=url+".html";
+            console.log(url);
             var http = new XMLHttpRequest();
             http.open("GET", url, true);
 
@@ -30,7 +32,6 @@ url=url.replace(".tv",".me/playvid-");
                     doOnComplete(lnk)
                 
             
-
+            }
             http.send();
-
 
