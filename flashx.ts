@@ -1,4 +1,4 @@
- url=url.replace(".tv/",".me/playvid-");
+            url=url.replace(".tv/",".me/playvid-");
             url=url+".html";
             console.log(url);
             var http = new XMLHttpRequest();
