@@ -24,5 +24,3 @@ var http = new XMLHttpRequest();
         }, 8000);
        } 
       http.send();
-
-    }
