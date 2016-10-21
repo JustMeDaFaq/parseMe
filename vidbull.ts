@@ -1,4 +1,4 @@
-var http = new XMLHttpRequest();
+      var http = new XMLHttpRequest();
 
       http.open("GET", url,true);
     
@@ -6,8 +6,6 @@ var http = new XMLHttpRequest();
             var temp=http.responseText.split('"');
             var lnk=temp.find(x=>(x.endsWith(".mp4")||x.endsWith(".mkv")));
             doOnComplete(lnk);
-
-            
-
        } 
+       
       http.send();
