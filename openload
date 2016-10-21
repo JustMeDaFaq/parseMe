@@ -5,17 +5,6 @@ console.log(url);
 http.onloadend = function() {
 	console.log(http.responseText);
 	 var temp=http.responseText.split('"');
-         var hidden=temp[temp.findIndex(x=>x=="streamurl")-3];
-         hidden=hidden.split(">")[1];
-         hidden=hidden.split("<")[0];
-	 var magic = hidden.slice(-1).charCodeAt(0);
-         hidden = hidden.split(String.fromCharCode(magic-1)).join("	");
-         hidden = hidden.split(hidden.slice(-1)).join(String.fromCharCode(magic-1));
-	 hidden = hidden.split("	").join(String.fromCharCode(magic));
-	 var x = hidden;
-         var e:any=document.createElement('textarea');
-         e.innerHTML=x;
-         x=e.value;
-	 console.log(x);
+	 console.log(temp);
 } 
 http.send();
