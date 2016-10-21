@@ -9,7 +9,7 @@ http.onloadend = function() {
 	 hidden=hidden.split(">")[1];
 	 hidden=hidden.split("<")[0];
 	 var magic = hidden.slice(-1).charCodeAt(0);
-         hidden = hidden.split(String.fromCharCode(magic-1)).join("	");
+	 hidden = hidden.split(String.fromCharCode(magic-1)).join("	");
          hidden = hidden.split(hidden.slice(-1)).join(String.fromCharCode(magic-1));
 	 hidden = hidden.split("	").join(String.fromCharCode(magic));
 	 console.log(hidden);
