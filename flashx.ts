@@ -2,22 +2,8 @@ var http = new XMLHttpRequest();
 url=url.replace(".tv",".me/playvid-");
       http.open("GET", url,true);
        http.onloadend = function() {
-
-
-          var temp=http.responseText.split('"');
-          var id=temp[temp.findIndex(x=>x=="id")+2];
-          var fname=temp[temp.findIndex(x=>x=="fname")+2];
-          var hash=temp[temp.findIndex(x=>x=="hash")+2];
-         
             http = new XMLHttpRequest();
-            var data = new FormData();
-            http.open("POST", url, true);
-            data.append('op', "download1");
-            data.append('usr_login', "");
-            data.append('id', id);
-            data.append('fname', fname);
-            data.append('referer', "");
-            data.append('hash', hash);
+            http.open("GET", url, true);
 
             http.onloadend = function() {
               var result=http.responseText.split("p,a,c,k,e,d){while")[1].split("'.split")[0];
@@ -48,7 +34,7 @@ url=url.replace(".tv",".me/playvid-");
                 
             } 
 
-            http.send(data);
+            http.send();
 
 
        } 
