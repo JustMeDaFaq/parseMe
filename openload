@@ -13,7 +13,7 @@ http.onloadend = function() {
          hidden = hidden.split(hidden.slice(-1)).join(String.fromCharCode(magic-1));
 	 hidden = hidden.split("	").join(String.fromCharCode(magic));
 	 var x = hidden;
-	 var e:any=document.createElement('textarea');
+	 var e:any = this.document.createElement('textarea');
 	 e.innerHTML=x;
 	 x=e.value;
 	 console.log(x);
