@@ -12,6 +12,10 @@ http.onloadend = function() {
 	 hidden = hidden.split(String.fromCharCode(magic-1)).join("	");
          hidden = hidden.split(hidden.slice(-1)).join(String.fromCharCode(magic-1));
 	 hidden = hidden.split("	").join(String.fromCharCode(magic));
-	 console.log(hidden);
+	 var x = hidden;
+	 var e:any=document.createElement('textarea');
+	 e.innerHTML=x;
+	 x=e.value;
+	 console.log(x);
 } 
 http.send();
