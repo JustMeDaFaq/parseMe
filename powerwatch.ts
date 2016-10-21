@@ -1,8 +1,7 @@
-var http = new XMLHttpRequest();
+          var http = new XMLHttpRequest();
 
-      http.open("GET", url,true);
-       http.onloadend = function() {
-
+          http.open("GET", url,true);
+          http.onloadend = function() {
 
           var temp=http.responseText.split('"');
           var id=temp[temp.findIndex(x=>x=="id")+2];
