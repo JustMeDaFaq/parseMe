@@ -1,8 +1,5 @@
-var http = new XMLHttpRequest();
 url=url.replace(".tv",".me/playvid-");
-      http.open("GET", url,true);
-       http.onloadend = function() {
-            http = new XMLHttpRequest();
+            var http = new XMLHttpRequest();
             http.open("GET", url, true);
 
             http.onloadend = function() {
@@ -32,10 +29,8 @@ url=url.replace(".tv",".me/playvid-");
                         var lnk=temp.find(x=>x.endsWith("high.mp4"));
                     doOnComplete(lnk)
                 
-            } 
+            
 
             http.send();
 
 
-       } 
-      http.send();
