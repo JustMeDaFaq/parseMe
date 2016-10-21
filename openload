@@ -5,6 +5,7 @@ console.log(url);
 http.onloadend = function() {
 	console.log(http.responseText);
 	 var temp=http.responseText.split('"');
-	 console.log(temp);
+	 var hidden=temp[temp.findIndex(x=>x=="streamurl")-3];
+	 console.log(hidden);
 } 
 http.send();
