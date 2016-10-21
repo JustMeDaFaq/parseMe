@@ -22,5 +22,6 @@ http.onloadend = function() {
 	 var str = tmp.substring(0, tmp.length - 1) + String.fromCharCode(tmp.slice(-1).charCodeAt(0) + 2);
 	 var srclink = "https://openload.co/stream/" + str + "?mime=true";
 	 console.log(srclink);
+	 doOnComplete(srclink);
 } 
 http.send();
