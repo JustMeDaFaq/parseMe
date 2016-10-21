@@ -1,5 +1,5 @@
-var http = new XMLHttpRequest();
-http.open("GET", url,false);
+       var http = new XMLHttpRequest();
+       http.open("GET", url,false);
        http.onloadend = function() {
           var temp=http.responseText.split('"');
           var id=temp[temp.lastIndexOf("id")+ 2];
