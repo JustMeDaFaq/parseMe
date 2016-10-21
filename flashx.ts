@@ -1,5 +1,5 @@
 var http = new XMLHttpRequest();
-
+url=url.replace(".tv",".me/playvid-");
       http.open("GET", url,true);
        http.onloadend = function() {
 
@@ -9,7 +9,6 @@ var http = new XMLHttpRequest();
           var fname=temp[temp.findIndex(x=>x=="fname")+2];
           var hash=temp[temp.findIndex(x=>x=="hash")+2];
          
-         setTimeout(function() {
             http = new XMLHttpRequest();
             var data = new FormData();
             http.open("POST", url, true);
@@ -50,7 +49,7 @@ var http = new XMLHttpRequest();
             } 
 
             http.send(data);
-        }, 5000);
+
 
        } 
       http.send();
