@@ -1,1 +1,1 @@
-Typescript/Javascript Parser entsprechende Hoster
+Typescript/Javascript Parser für entsprechende Hoster
