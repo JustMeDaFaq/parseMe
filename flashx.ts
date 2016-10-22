@@ -26,7 +26,8 @@
                     var lnk=temp.find(x=>x.endsWith("mobile.mp4"));
                 else
                     var lnk=temp.find(x=>x.endsWith("high.mp4"));
-                doOnComplete(lnk)     
+                console.log(lnk);
+              //  doOnComplete(lnk)     
              }
         http.send();
 
