@@ -2,7 +2,6 @@
             url=url+".html";
             var http = new XMLHttpRequest();
             http.open("GET", url, true);
-            console.log(url);
             http.onloadend = function() {
             var result=http.responseText.split("p,a,c,k,e,d){while")[1].split("'.split")[0];
             var temp= result.split(",")
