@@ -1,5 +1,5 @@
 url=url.Replace("http","https");
-url=url.Replace(".html","");
+console.log(url);
 var http = new XMLHttpRequest();
 http.open("GET", url,true);
 http.onloadend = function() {
