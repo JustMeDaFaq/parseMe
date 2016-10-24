@@ -1,5 +1,6 @@
             url=url.replace(".tv/",".me/playvid-");
-            url=url+".html";
+            if(!url.endsWith("html"))
+              url=url+".html";
             var http = new XMLHttpRequest();
             http.open("GET", url, true);
             http.onloadend = function() {
