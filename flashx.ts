@@ -6,7 +6,7 @@
             http.onloadend = function() {
             var result=http.responseText.split("p,a,c,k,e,d){while")[1].split("'.split")[0];
             var temp= result.split(",")
-                    
+                    console.log(http.responseText);
             var p ="";
             var a=0;
             var c=0;
