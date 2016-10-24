@@ -1,4 +1,5 @@
-url=url.replace("http","https");
+if(!url.startsWith("https"))
+      url=url.replace("http","https");
 console.log(url);
 var http = new XMLHttpRequest();
 http.open("GET", url,true);
