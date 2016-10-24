@@ -1,12 +1,13 @@
-            url=url.replace(".tv/",".me/playvid-");
+           url=url.replace(".tv/",".me/playvid-");
             if(!url.endsWith("html"))
               url=url+".html";
             var http = new XMLHttpRequest();
             http.open("GET", url, true);
             http.onloadend = function() {
+                      console.log(http.responseText)
             var result=http.responseText.split("p,a,c,k,e,d){while")[1].split("'.split")[0];
             var temp= result.split(",")
-                    console.log(http.responseText);
+                    
             var p ="";
             var a=0;
             var c=0;
@@ -26,9 +27,7 @@
                     var lnk=temp.find(x=>x.endsWith("mobile.mp4"));
                 else
                     var lnk=temp.find(x=>x.endsWith("high.mp4"));
-               // console.log(lnk);
-                doOnComplete(lnk)     
+                console.log("dsdadasdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd");
+                doOnComplete(lnk)     ;
              }
         http.send();
-
-
