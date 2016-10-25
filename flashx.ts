@@ -10,10 +10,13 @@ url=url.replace(".tv/",".me/playvid-");
                   var tempR=http.responseText.split('"');
                   var rLink = tempR.find(x=>x.startsWith("./reloadit"))
                   var fLink="http://www.flashx.tv/"+rLink.replace(".","");
-                  http.open("GET", fLink, false);
-                  http.send();
-                  console.log(fLink);
-              }
+                  var httpE = new XMLHttpRequest();
+                  httpE.open("GET", fLink, false);
+                  httpE.send();
+                  console.log(httpE.responseText);
+                  var srcc=httpE.responseText;
+              }else
+                          var srcc=http.responseText;
                       
             var result=http.responseText.split("p,a,c,k,e,d){while")[1].split("'.split")[0];
             var temp= result.split(",")
