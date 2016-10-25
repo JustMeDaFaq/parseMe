@@ -6,10 +6,12 @@ url=url.replace(".tv/",".me/playvid-");
             http.onloadend = function() {
               console.log(http.responseText);
               if(http.responseText.indexOf("reloadit")!=-1){
-                 alert("reload");
+                console.log("reload");
                   var tempR=http.responseText.split('"');
                   var rLink = tempR.find(x=>x.startsWith("./reloadit"))
                   var fLink="http://www.flashx.tv/"+rLink.replace(".","");
+                  http.open("GET", fLink, false);
+                  http.send();
                   console.log(fLink);
               }
                       
