@@ -21,7 +21,7 @@ url=url.replace(".tv/",".me/playvid-");
               }else
                           var srcc=http.responseText;
                       
-            var result=http.responseText.split("p,a,c,k,e,d){while")[1].split("'.split")[0];
+            var result=srcc.split("p,a,c,k,e,d){while")[1].split("'.split")[0];
             var temp= result.split(",")
                     
             var p ="";
