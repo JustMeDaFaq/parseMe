@@ -1,7 +1,5 @@
         if (url.indexOf('/f/')!= -1){
-                 alert(url.split('/f/')[1]);
-                        url=url.split('/f/')[1].split('/')[0];
-               
+                        url=url.split('/f/')[1].split('/')[0];              
         }
         url="https://openload.co/embed/"+url;
         var http = new XMLHttpRequest();
