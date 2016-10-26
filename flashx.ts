@@ -47,7 +47,7 @@
                         else
                             var lnk=temp.find(x=>x.endsWith(".mp4"));
 
-                        console.log(lnk);
+                        alert(lnk);
                 
                       
           
