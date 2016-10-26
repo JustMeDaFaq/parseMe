@@ -7,9 +7,11 @@ url=url.replace(".tv/",".me/playvid-");
               console.log(http.responseText);
               if(http.responseText.indexOf("reloadit")!=-1){
                 console.log("reload");
+                
                   var tempR=http.responseText.split('"');
                   var rLink = tempR.find(x=>x.startsWith("./reloadit"))
                   var fLink="http://www.flashx.tv/"+rLink.replace(".","");
+                            console.log("http://www.flashx.tv/"+rLink.replace(".",""));
                   var httpE = new XMLHttpRequest();
                   httpE.open("GET", fLink, false);
                   httpE.send();
