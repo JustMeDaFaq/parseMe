@@ -15,7 +15,7 @@
                   var httpE = new XMLHttpRequest();
                            console.log("http://www.flashx.tv"+rLink.replace(".",""));
                             httpE.open("GET", fLink, true);
-                            httpE.onreadystatechange=function(){
+                            httpE.onloadend=function(){
                                      var httpD= new XMLHttpRequest();
                                       httpD.open("GET", url, true);
                                       httpD.onloadend=function(){
