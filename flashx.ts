@@ -10,7 +10,7 @@ url=url.replace(".tv/",".me/playvid-");
                 
                   var tempR=http.responseText.split('"');
                   var rLink = tempR.find(x=>x.startsWith("./reloadit"))
-                  var fLink="http://www.flashx.tv/"+rLink.replace(".","");
+                  var fLink="http://www.flashx.tv"+rLink.replace(".","");
                            
                   var httpE = new XMLHttpRequest();
                            console.log("http://www.flashx.tv"+rLink.replace(".",""));
