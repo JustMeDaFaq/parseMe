@@ -11,11 +11,12 @@ url=url.replace(".tv/",".me/playvid-");
                   var tempR=http.responseText.split('"');
                   var rLink = tempR.find(x=>x.startsWith("./reloadit"))
                   var fLink="http://www.flashx.tv/"+rLink.replace(".","");
-                            console.log("http://www.flashx.tv/"+rLink.replace(".",""));
+                           
                   var httpE = new XMLHttpRequest();
+                           console.log("http://www.flashx.tv/"+rLink.replace(".",""));
                   httpE.open("GET", fLink, false);
                   httpE.send();
-                  console.log(httpE.responseText);
+                  console.log("test");
                   var srcc=httpE.responseText;
               }else
                           var srcc=http.responseText;
