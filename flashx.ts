@@ -13,7 +13,7 @@ url=url.replace(".tv/",".me/playvid-");
                   var fLink="http://www.flashx.tv/"+rLink.replace(".","");
                            
                   var httpE = new XMLHttpRequest();
-                           console.log("http://www.flashx.tv/"+rLink.replace(".",""));
+                           console.log("http://www.flashx.tv"+rLink.replace(".",""));
                   httpE.open("GET", fLink, false);
                   httpE.send();
                   console.log("test");
