@@ -20,7 +20,7 @@
             var s=[];
             for(var i=0;i<x.length;i++){var j=x.charCodeAt(i);if((j>=33)&&(j<=126)){s[i]=String.fromCharCode(33+((j+14)%94));}else{s[i]=String.fromCharCode(j);}}
             var tmp=s.join("");
-            var str = tmp.substring(0, tmp.length - 1) + String.fromCharCode(tmp.slice(-1).charCodeAt(0) + 2);
+            var str = tmp.substring(0, tmp.length - 1) + String.fromCharCode(tmp.slice(-1).charCodeAt(0) + 3);
             var srclink = "https://openload.co/stream/" + str + "?mime=true";
             doOnComplete(srclink);
         } 
