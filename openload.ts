@@ -1,27 +1,38 @@
-        if (url.indexOf('/f/')!= -1){
+     if (url.indexOf('/f/')!= -1){
                         url=url.split('/f/')[1].split('/')[0];              
-        }
-        url="https://openload.co/embed/"+url;
-        var http = new XMLHttpRequest();
-        http.open("GET", url,true);
-        http.onloadend = function() {
-            var temp=http.responseText.split('"');
-            var hidden=temp[temp.findIndex(x=>x=="streamurl")-3];
-            hidden=hidden.split(">")[1];
-            hidden=hidden.split("<")[0];
-            var magic = hidden.slice(-1).charCodeAt(0);
-            hidden = hidden.split(String.fromCharCode(magic-1)).join("	");
-            hidden = hidden.split(hidden.slice(-1)).join(String.fromCharCode(magic-1));
-            hidden = hidden.split("	").join(String.fromCharCode(magic));
-            var x = hidden;
-            var e = document.createElement('textarea');
-            e.innerHTML=x;
-            x=e.value;
-            var s=[];
-            for(var i=0;i<x.length;i++){var j=x.charCodeAt(i);if((j>=33)&&(j<=126)){s[i]=String.fromCharCode(33+((j+14)%94));}else{s[i]=String.fromCharCode(j);}}
-            var tmp=s.join("");
-            var str = tmp.substring(0, tmp.length - 1) + String.fromCharCode(tmp.slice(-1).charCodeAt(0) + 3);
-            var srclink = "https://openload.co/stream/" + str + "?mime=true";
-            doOnComplete(srclink);
-        } 
-        http.send();
+          }
+             var http = new XMLHttpRequest();
+          http.open('GET','https://api.openload.co/1/streaming/get?file='+url,true)
+         
+          http.onloadend=  function (){
+                  console.log(JSON.parse(http.responseText))
+                  if(JSON.parse(http.responseText).msg.indexOf("not")>0){
+                     let confirm = hosterControllerBSAPI.promp.create({
+                          title: 'Use this lightsaber?',
+                          message: 'You are not paired. Pair your device to use openload with 3rd party applications.',
+                          buttons: [
+                            {
+                              text: 'Different hoster',
+                              handler: () => {
+                                  
+                              }
+                            },
+                            {
+                              text: 'Pair now and try again',
+                              handler: () => {
+                             
+                                window.open("https://openload.co/pair","_self").onabort = function(){
+                                  alert("unload");
+                                }
+
+                               }
+                            }
+                          ]
+                        });
+                        confirm.present();
+                  }else{
+                    doOnComplete(JSON.parse(http.responseText).result);
+                  }
+
+              }
+              http.send();
